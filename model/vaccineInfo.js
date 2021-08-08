@@ -21,5 +21,5 @@ const vaccineCountSchema = new mongoose.Schema({
     'Total Individuals Vaccinated': { type: Number },
 });
 
-module.exports = mongoose.model('vaccine', vaccineCountSchema);
+module.exports = mongoose.model('vaccine', vaccineCountSchema, 'vaccine');
 

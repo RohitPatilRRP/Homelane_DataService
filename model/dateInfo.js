@@ -12,6 +12,6 @@ const covidCountSchema = new mongoose.Schema({
     Confirmed: { type: Number },
 });
 
-module.exports = mongoose.model('covidIndia', covidCountSchema);
+module.exports = mongoose.model('covidIndia', covidCountSchema,'covidIndia');
 
 

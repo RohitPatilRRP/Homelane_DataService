@@ -8,6 +8,4 @@ const stateCountSchema = new mongoose.Schema({
     Positive: { type: Number },
 });
 
-module.exports = mongoose.model('statewiseTest', stateCountSchema);
-
-
+module.exports = mongoose.model('statewiseTest', stateCountSchema,'statewiseTest');
