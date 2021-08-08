@@ -15,7 +15,7 @@ mongoose.connect(config.mongoUrl, {
     process.exit();
 });
 
-app.listen(5000, (error) => {
+app.listen(process.env.PORT || 5000, (error) => {
     if (error) {
         console.log('Unable to listen for connections: ', error);
     }

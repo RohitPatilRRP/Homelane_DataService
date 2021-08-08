@@ -9,7 +9,6 @@ const getDateInfo = async (req, res) => {
     try {
         let { Date: date } = req.body;
         let updateDate = moment(new Date(date)).format('DD/MM/YYYY');
-        console.log(updateDate);
         const promiseArray = [
             covidCount.aggregate([
                 {
