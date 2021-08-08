@@ -1,7 +1,7 @@
-const fetch = require('node-fetch');
-
 const config = require('../../config/config');
-const User = require('../../model/user.model');
+const covidCount = require('../../model/dateInfo');
+const stateTest = require('../../model/stateInfo');
+const vaccines = require('../../model/vaccineInfo');
 
 const getDateInfo = async (req, res) => {
     try {
