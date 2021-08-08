@@ -96,7 +96,7 @@ const getDateInfo = async (req, res) => {
 
 const getStateInfo = async (req, res) => {
     try {
-        let { State } = req.body;
+        let { State_name: State } = req.body;
         const promiseArray = [
             covidCount.aggregate([
                 {
@@ -184,7 +184,7 @@ const getStateInfo = async (req, res) => {
 
 const getPinpointInfo = async (req, res) => {
     try {
-        let { State, Date: date } = req.body;
+        let { State_name: State, Date: date } = req.body;
         let updateDate = moment(new Date(date)).format('DD/MM/YYYY');
         const promiseArray = [
             covidCount.aggregate([
@@ -238,7 +238,7 @@ const getPinpointInfo = async (req, res) => {
                 {
                     $project: {
                         State: 1,
-                        Date:1,
+                        Date: 1,
                         Negative: 1,
                         Positive: 1,
                     }
@@ -262,7 +262,7 @@ const getPinpointInfo = async (req, res) => {
                 {
                     $project: {
                         State: 1,
-                        'Updated On':1,
+                        'Updated On': 1,
                         'Total Doses Administered': 1,
                     }
                 }
